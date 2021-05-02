@@ -1,0 +1,17 @@
+{
+  "id": "nodebb-plugin-signature-display",
+  "name": "NodeBB User signature display settings",
+  "description": "NodeBB Plugin that allows users to tweak signature display config",
+  "url": "https://github.com/ariastel/nodebb-plugin-signature-display",
+  "library": "./plugin/index.js",
+  "hooks": [
+    { "hook": "static:app.load", "method": "hooks.statics.load" },
+    { "hook": "static:app.load", "method": "hooks.filters.init" },
+    { "hook": "filter:admin.header.build", "method": "hooks.filters.addMenuItem" },
+    { "hook": "filter:user.customSettings", "method": "hooks.filters.updateCustomSettings"},
+    { "hook": "filter:user.saveSettings", "method": "hooks.filters.userSaveSettings"},
+    { "hook": "filter:parse.signature", "method": "hooks.filters.parseSignature"}
+  ],
+  "languages": "languages",
+  "templates": "templates"
+}
