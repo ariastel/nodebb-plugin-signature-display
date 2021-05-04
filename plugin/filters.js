@@ -12,7 +12,7 @@ Filters.init = async (hookData) => {
 };
 
 Filters.addMenuItem = async function addMenuItem(customHeader) {
-  customHeader.authentication.push({
+  customHeader.plugins.push({
     route: `/${constants.plugin.route}`,
     icon: constants.plugin.icon,
     name: constants.displayName,

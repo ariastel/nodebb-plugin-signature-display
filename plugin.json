@@ -5,7 +5,7 @@
   "url": "https://github.com/ariastel/nodebb-plugin-signature-display",
   "library": "./plugin/index.js",
   "hooks": [
-    { "hook": "static:app.load", "method": "hooks.statics.load" },
+    { "hook": "static:app.load", "method": "hooks.statics.init" },
     { "hook": "static:app.load", "method": "hooks.filters.init" },
     { "hook": "filter:admin.header.build", "method": "hooks.filters.addMenuItem" },
     { "hook": "filter:user.customSettings", "method": "hooks.filters.updateCustomSettings"},
